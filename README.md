@@ -16,39 +16,6 @@ This dataset includes multi-channel iEEG recordings with clinical ground truth l
 3. **Deep Learning Stage (Python/TensorFlow)**: 1D-CNN temporal analysis and 2D-CNN Time-Frequency (CWT) classification.
 4. **Ensemble Stage**: Final decision via a voting system.
 
----
-
-## Stage 1: Preprocessing & Feature Engineering
-
-### 1.1 MATLAB Signal Conditioning
-The preprocessing stage (implemented in 'Preprocessing_HFO_Hybrid.m') prepares the raw iEEG data for machine learning. 
-- **Window Length**: 200ms (400 samples at 2000Hz).
-- **Filtering**: 50Hz Notch filter and 80-500Hz 4th-order Butterworth bandpass filter.
-- **Montage**: Bipolar derivation based on clinical specifications.
-
-### 1.2 Hybrid Feature Extraction
-We extract a multi-dimensional feature space (28 metrics) that combines:
-- **Temporal Metrics**: RMS, Line-Length, Kurtosis, Skewness, Zero-Crossing.
-- **Spectral Metrics**: Peak Frequency, Band-specific Power (Ripple vs. Fast Ripple).
-- **Advanced Physics**: 
-  - **SNR_Burst**: Variance ratio between the signal core and baseline.
-  - **GaborCorrelation**: Template matching using Gabor atoms for morphological validation.
-
-### 1.3 Data Export Formats
-The pipeline generates two primary outputs for each processed file:
-- **'.parquet'**: Contains the feature matrix for XGBoost training. Includes traceability metadata (SourceFile, TimeSec).
-- **'.mat' (v7.3)**: Contains the normalized 200ms snippets and clinical ground truth labels for CNN training.
-
----
-
-## Stage 2: XGBoost Screener Results
-The first classification stage uses an XGBoost model optimized for maximum sensitivity to act as a data screener.
-
-### Validation Metrics
-<img width="1277" height="690" alt="xgboost" src="https://github.com/user-attachments/assets/9efa1ecc-c313-48d1-a81f-d26b74caae5a" />
-
-*Figure 1. Performance metrics and normalized confusion matrix for the XGBoost screening stage.*
-
 ## Installation & Requirements
 
 This project requires both MATLAB and Python environments to execute the full pipeline.
@@ -59,11 +26,6 @@ The preprocessing scripts were developed and tested in **MATLAB R2023b** (or lat
 **Required Toolboxes:**
 * Signal Processing Toolbox
 * Statistics and Machine Learning Toolbox
-
-**Setup:**
-1. Clone this repository.
-2. Add the 'MATLAB/' folder to your MATLAB path.
-3. Ensure your raw data follows the structure expected by the 'Preprocessing_HFO_Hybrid.m' script.
 
 ### 2. Python Environment (ML/DL Pipeline)
 The classification stages (XGBoost & CNNs) require **Python 3.10+**. We recommend using a virtual environment or Google Colab for GPU acceleration.

@@ -54,7 +54,7 @@ HFO-Hybrid-Detection/
 │   │   └── consolidator_master_dataset.m  # Aggregates patient data for XGBoost screening
 │   └── python/
 │       ├── XGBoost_screener.py            # High-throughput candidate filtering
-│       ├── Consolidator_for_CNN.py        # Signal hydration and balancing (Oversampling)
+│       ├── Consolidator_for_1D_CNN.py        # Signal hydration and balancing (Oversampling)
 │       ├── 1D_CNN.py                      # Temporal ResNet-based classification
 │       ├── 2D_CNN.py                      # Time-Frequency (Spectrogram) classification
 │       └── voting.py                      # Late-fusion ensemble for final prediction

@@ -56,6 +56,7 @@ HFO-Hybrid-Detection/
 │       ├── XGBoost_screener.py            # High-throughput candidate filtering
 │       ├── Consolidator_for_1D_CNN.py        # Signal hydration and balancing (Oversampling)
 │       ├── 1D_CNN.py                      # Temporal ResNet-based classification
+│       ├── 2D_Spectrogram_Generator.py    # S-Transform Time-Frequency feature map extraction
 │       ├── 2D_CNN.py                      # Time-Frequency (Spectrogram) classification
 │       └── voting.py                      # Late-fusion ensemble for final prediction
 ├── README.md                              # Project documentation and setup guide

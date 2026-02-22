@@ -42,6 +42,9 @@ The classification stages (XGBoost & CNNs) require **Python 3.10+**. We recommen
 
 ## Project Hierarchy
 
+## Project Hierarchy
+
+```text
 HFO-Hybrid-Detection/
 ├── data/
 │   ├── raw/                # Original clinical .mat files (Fedele et al. dataset)
@@ -59,4 +62,3 @@ HFO-Hybrid-Detection/
 │       └── voting.py                      # Late-fusion ensemble for final prediction
 ├── README.md                              # Project documentation and setup guide
 └── requirements.txt                       # Python dependency list
-

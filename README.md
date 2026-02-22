@@ -42,8 +42,6 @@ The classification stages (XGBoost & CNNs) require **Python 3.10+**. We recommen
 
 ## Project Hierarchy
 
-## Project Hierarchy
-
 ```text
 HFO-Hybrid-Detection/
 ├── data/

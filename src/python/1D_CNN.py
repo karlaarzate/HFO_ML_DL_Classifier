@@ -1,6 +1,6 @@
 """
 ========================================================================
-  PART 3: 1D-RESNET DEEP LEARNING CLASSIFIER (MULTICLASS)
+  PART 4: 1D-RESNET DEEP LEARNING CLASSIFIER (MULTICLASS)
   Project: Automated HFO Detection with ML/DL Architecture
   
   Description:

@@ -39,3 +39,24 @@ The classification stages (XGBoost & CNNs) require **Python 3.10+**. We recommen
 
 **Quick Install:**
 'pip install pandas numpy pywavelets scipy xgboost scikit-learn tensorflow joblib matplotlib seaborn tqdm'
+
+## Project Hierarchy
+
+HFO-Hybrid-Detection/
+├── data/
+│   ├── raw/                # Original clinical .mat files (Fedele et al. dataset)
+│   ├── processed/          # Intermediate HFO candidates (Snippets & Handcrafted Features)
+│   └── master/             # Final consolidated & balanced tensors for Deep Learning training
+├── src/
+│   ├── matlab/
+│   │   ├── Preprocessing_200ms_window.m   # Physics-based detection and feature extraction
+│   │   └── consolidator_master_dataset.m  # Aggregates patient data for XGBoost screening
+│   └── python/
+│       ├── XGBoost_screener.py            # High-throughput candidate filtering
+│       ├── Consolidator_for_CNN.py        # Signal hydration and balancing (Oversampling)
+│       ├── 1D_CNN.py                      # Temporal ResNet-based classification
+│       ├── 2D_CNN.py                      # Time-Frequency (Spectrogram) classification
+│       └── voting.py                      # Late-fusion ensemble for final prediction
+├── README.md                              # Project documentation and setup guide
+└── requirements.txt                       # Python dependency list
+

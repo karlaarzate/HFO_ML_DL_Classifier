@@ -58,6 +58,6 @@ HFO-Hybrid-Detection/
 │       ├── 1D_CNN.py                      # Temporal ResNet-based classification
 │       ├── 2D_Spectrogram_Generator.py    # S-Transform Time-Frequency feature map extraction
 │       ├── 2D_CNN.py                      # Time-Frequency (Spectrogram) classification
-│       └── voting.py                      # Late-fusion ensemble for final prediction
+│       └── weighted_soft_voting.py                      # Late-fusion ensemble for final prediction
 ├── README.md                              # Project documentation and setup guide
 └── requirements.txt                       # Python dependency list

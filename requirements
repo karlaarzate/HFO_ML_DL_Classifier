@@ -1,0 +1,24 @@
+#run by using: pip install -r requirements.txt
+
+# --- Core Data Processing ---
+numpy
+pandas
+scipy
+h5py
+pyarrow
+
+# --- Machine Learning & Deep Learning ---
+tensorflow
+scikit-learn
+xgboost
+shap
+
+# --- Signal Processing & Spectrograms ---
+librosa
+stockwell
+joblib
+
+# --- Visualization ---
+matplotlib
+seaborn
+tqdm

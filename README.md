@@ -12,6 +12,8 @@ This dataset includes multi-channel iEEG recordings with clinical ground truth l
 
 Repository dataset can be access at: https://crcns.org/data-sets/methods/ieeg-1
 
+*Note:* download and save the files in the directory data/raw. For each patient, extract the tar file and save the .mat file in a subfolder named "pat#" (exampe: pat2, pat7).
+
 ## Pipeline Overview
 1. **Preprocessing (MATLAB)**: Signal conditioning, artifact removal, and hybrid physics-based feature extraction.
 2. **Screener Stage (Python/XGBoost)**: High-sensitivity candidate filtering.

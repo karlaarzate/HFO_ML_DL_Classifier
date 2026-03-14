@@ -10,6 +10,8 @@ The intracranial EEG (iEEG) data used in this project was provided by the **Fede
 
 This dataset includes multi-channel iEEG recordings with clinical ground truth labels for Ripples (80-250 Hz) and Fast Ripples (250-500 Hz), which are essential for the validation of the hybrid models implemented here.
 
+Repository dataset can be access at: https://crcns.org/data-sets/methods/ieeg-1
+
 ## Pipeline Overview
 1. **Preprocessing (MATLAB)**: Signal conditioning, artifact removal, and hybrid physics-based feature extraction.
 2. **Screener Stage (Python/XGBoost)**: High-sensitivity candidate filtering.

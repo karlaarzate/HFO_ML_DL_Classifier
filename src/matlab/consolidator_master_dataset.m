@@ -127,6 +127,8 @@ if ismember('Patient', currentVars)
     fprintf('   - Subject IDs: %s\n', strjoin(uniquePats, ', '));
     
     if numPats < 2
+   % debbugin (using only one patient):
+   %if numPats < 1
         fprintf('   [CRITICAL] Multi-subject diversity required for LOPO validation. Found: %d\n', numPats);
         isDatasetValid = false;
     else

@@ -40,7 +40,7 @@ The classification stages (XGBoost & CNNs) require **Python 3.10+**. We recommen
 * **Visualization:** 'matplotlib', 'seaborn', 'tqdm'.
 
 **Quick Install:**
-'pip install pandas numpy pywavelets scipy xgboost scikit-learn tensorflow joblib matplotlib seaborn tqdm'
+'run requirements file: pip install -r requirements.txt'
 
 ## Project Hierarchy
 

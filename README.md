@@ -65,6 +65,7 @@ HFO-Hybrid-Detection/
 │       └── weighted_soft_voting.py                      # Late-fusion ensemble for final prediction
 ├── README.md                              # Project documentation and setup guide
 └── requirements.txt                       # Python dependency list
+```
 
 ## Authors:
 * Javeth Calvo Molina
